@@ -145,6 +145,8 @@ namespace Sitecore.SharedSource.DataImporter.Providers
 			DateField = ImportItem.GetItemField("Date Field", Logger);
 			FolderTemplate = GetImportFolderTemplate();
 
+			FieldService = new FieldService(l);
+
 			//populate field definitions
 			FieldDefinitions = GetFieldDefinitions(ImportItem);
 
@@ -153,7 +155,6 @@ namespace Sitecore.SharedSource.DataImporter.Providers
 
             StringService = new StringService();
             ProcessorService = new ProcessorService(l);
-            FieldService = new FieldService(l);
         }
 
 		#endregion Constructor
